@@ -10,6 +10,28 @@ This project implements an online-learning image classifier without a CPU. A bin
 ## Modules
 
 
+## Module Hierarchy
+
+```
+NeuromorphicAccelerator
+├── ReservoirLayer
+│   ├── ReservoirControl
+│   ├── CellularAutomata
+│   │   └── ReservoirColumn
+│   │       └── ReservoirNeuron
+│   ├── Maxpool
+│   │   └── MaxpoolCell
+│   └── Flatten
+└── PerceptronLayer
+    ├── PerceptronControl
+    ├── OutputNeuron
+    ├── WinnerTakesAll
+    ├── Weights
+    ├── Biases
+    └── ParameterUpdate
+```
+
+
 | Module | Description |
 |---|---|
 | `Cellular_Automata` | ECA Rule 90 reservoir, MxN grid |
