@@ -4,7 +4,7 @@ Reservoir Computing with Cellular Automata (ReCA) for MNIST digit classification
 
 ## Overview
 
-This project implements an online-learning image classifier using a ReCA with a perceptron layer . A binary MNIST image is fed through a Cellular Automata (CA) reservoir, downsampled with MaxPooling, and classified by a fully connected layer that updates its weights after every prediction.
+This project implements an online-learning image classifier using a ReCA with a perceptron layer . A binary MNIST image is fed through a Cellular Automata (CA) reservoir, downsampled with MaxPooling, and classified by a fully connected layer that updates its weights after every prediction. The PYNQ framework was used in Jupyter notebook to train and evaluate the model. 
 
 
 ## Module Hierarchy
