@@ -4,7 +4,7 @@ Reservoir Computing with Cellular Automata (ReCA) for MNIST digit classification
 
 ## Overview
 
-This project implements an online-learning image classifier without a CPU. A binary MNIST image is fed through a Cellular Automata (CA) reservoir, downsampled with MaxPooling, and classified by a fully connected layer that updates its weights after every prediction.
+This project implements an online-learning image classifier using a ReCA with a perceptron layer . A binary MNIST image is fed through a Cellular Automata (CA) reservoir, downsampled with MaxPooling, and classified by a fully connected layer that updates its weights after every prediction.
 
 
 ## Module Hierarchy
@@ -40,7 +40,7 @@ NeuromorphicAccelerator
 | `WIDTH_W` | 6 | Weight bit width |
 | `WIDTH_B` | 7 | Bias bit width |
 
-## Repository Structure
+## Repository Folders
 
 | Folder | Description |
 |---|---|
