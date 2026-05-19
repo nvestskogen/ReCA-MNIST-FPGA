@@ -5,6 +5,8 @@ import torch.nn.functional as F
 from sklearn.datasets import fetch_openml
 from codecarbon import EmissionsTracker
 
+# Based on the ReCA implementation: https://colab.research.google.com/drive/1iMLRg3yRKuNVYh8azrtdcKoFiNMSzSUK
+# The network is pretrained using the link below.
 
 def to_bitplanes(img):
     return (img > 128).astype(np.uint8)[None, :, :]
