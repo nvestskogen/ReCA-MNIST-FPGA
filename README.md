@@ -62,9 +62,9 @@ The design is fully parameterized to allow for exploration of accuracy/resource/
 
 ## Inference Results
 
-A 100 MHz clock was used as the baseline for inference energy analysis. At this frequency, 73% of the total inference power is static power, making clock frequency and board selection the primary levers for energy reduction.
+A 100 MHz clock was used as the baseline for inference energy analysis. At this frequency, 73% of the total inference power is static power.
 
-When the clock is scaled by a factor $A$ relative to the 100 MHz baseline, the inference energy can be estimated as:
+When the clock is scaled by a factor $A = f/100MHz$, the inference energy can be estimated as:
 
 $$
 \begin{aligned}
