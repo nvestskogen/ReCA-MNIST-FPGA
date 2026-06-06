@@ -11,7 +11,7 @@ This repository contains the FPGA implementation of the MNIST classifier. A key 
 
 $$
 \begin{aligned}
-E &= (P_{\text{static}} + P_{\text{dyn}}) \cdot t \\
+E_{\text{Inference}} &= (P_{\text{static}} + P_{\text{dyn}}) \cdot t \\
 &= (VI_{\text{leak}} + \alpha CV^2 f) \cdot t
 \end{aligned}
 $$
@@ -90,7 +90,7 @@ Metrics are derived from post-implementation power and timing simulations. Energ
 | ZUBoard 1CG | 100 | 0.162 | 0.041 | 78.71 | 15.98 | 32.5 |
 | ZUBoard 1CG | 142\* | 0.162 | 0.122 | 55.19 | 15.67 | 33.9 |
 
-The ZUBoard 1CG achieves the lowest inference energy (15.67 μJ at $f_{\text{max}}$), giving us a potential reduction of **33.9% energy** over the baseline, primarily due to its lower static power.
+Static power can be reduced by fitting the design on a smaller device, preferably one slightly larger than the design requires. The smallest FPGA board whose resources were sufficient is the ZUBoard 1CG. With 47.56% fewer FFs and 47.14% fewer LUTs than the Ultra96-V2, it reduces $P_{\text{static}}$ and $P_{\text{dyn}}$ by 23.22% and 48.75% respectively, achieving the lowest inference energy of 15.67 μJ at $f_{\text{max}}$ — a potential energy saving of **33.5–33.9%** over the baseline depending on clock frequency.
 
 ## Repository Folders
 | Folder | Description |
