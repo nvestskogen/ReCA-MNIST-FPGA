@@ -66,18 +66,18 @@ When the clock is scaled by a factor $A$ relative to the 100 MHz baseline, the i
 
 $$
 \begin{aligned}
-E_{\text{inference}} &= (0.221\text{ W} + A \cdot 0.080\text{ W}) \cdot \frac{78.71\,\mu\text{s}}{A} \\
-                     &\approx \underbrace{\frac{17.4\,\mu\text{J}}{A}}_{E_{\text{static}}} + \underbrace{6.3\,\mu\text{J}}_{E_{\text{dynamic}}}
+E_{\text{inference}} &= (0.221\text{ W} + A \cdot 0.080\text{ W}) \cdot \frac{78.71\mu\text{s}}{A} \\
+                     &\approx \underbrace{\frac{17.4\mu\text{J}}{A}}_{E_{\text{static}}} + \underbrace{6.3\mu\text{J}}_{E_{\text{dynamic}}}
 \end{aligned}
 $$
 
 As clock frequency increases, static energy falls while dynamic energy remains constant, giving a theoretical minimum of:
 
 $$
-\lim_{f \to \infty} E_{\text{inference}} = 6.3\,\mu\text{J}
+\lim_{f \to \infty} E_{\text{inference}} = 6.3\mu\text{J}
 $$
 
-The maximum achievable clock frequency without timing violations, for our design, is $f_{\text{max}} \approx 139$ MHz on the Ultra96-V2, giving estimated $E_{\text{inference}} \approx 18.81\,\mu\text{J}$ with $A = 1.39$.
+The maximum achievable clock frequency without timing violations, for our design, is $f_{\text{max}} \approx 139$ MHz on the Ultra96-V2, giving estimated $E_{\text{inference}} \approx 18.81\mu\text{J}$ with $A = 1.39$.
 
 ### Power and Timing Results
 
