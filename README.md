@@ -3,7 +3,7 @@ Reservoir Computing with Cellular Automata (ReCA) for MNIST digit classification
 
 ## Background
 
-This project is part of a bachelor thesis with the following objective:
+his project is part of the bachelor thesis *Energy-aware Autonomous Real-time Neuromorphic Object Recognition Bot*, completed as part of a Bachelor of Electrical Engineering at OsloMet, with the following objective:
 
 > *"[...] develop an autonomous robot capable of navigating an area > 1.5m×1.5m. In the constrained area, objects with Modified National Institute of Standards and Technology (MNIST) numbers printed on them will be present. The robot should be able to explore and locate these objects. When the robot has successfully located an object, the robot should be able to focus, read and classify the MNIST number present on the object utilizing an FPGA."*
 
