@@ -19,7 +19,7 @@ $$
 where $P_{\text{dyn}} \propto f$. Minimizing FPGA resource usage (FFs, LUTs, BRAMs) reduces $P_{\text{dyn}}$, and therefore $E_{\text{dyn}}$, while minimizing inference time $t$ reduces the static leakage energy $E_{\text{static}}$.
 
 ## Overview
-This project implements an image classifier using a ReCA with a perceptron layer. A binary MNIST image is fed through a Cellular Automata (CA) reservoir, downsampled with MaxPooling, and classified by a fully connected layer that updates its weights after every prediction. The PYNQ framework was used in Jupyter Notebook to train and evaluate the model.
+This project implements an image classifier using a ReCA with a perceptron layer. A binary MNIST image is fed through a Cellular Automata (CA) reservoir, which generates new images by updating the pixel values using XOR on the vertical neighbours in the previous image. These images are then downsampled with MaxPooling, and classified by a fully connected layer that updates its weights after every prediction. The PYNQ framework was used in Jupyter Notebook to train and evaluate the model.
 
 <img src="ReCA_poster_2.png" alt="System Overview" width="1000"/>
 
