@@ -23,6 +23,8 @@ leakage energy $E_{\text{static}}$,
 ## Overview
 This project implements an image classifier using a ReCA with a perceptron layer. A binary MNIST image is fed through a Cellular Automata (CA) reservoir, downsampled with MaxPooling, and classified by a fully connected layer that updates its weights after every prediction. The PYNQ framework was used in Jupyter Notebook to train and evaluate the model.
 
+<img src="ReCA_poster_2.png" alt="System Overview" width="800"/>
+
 ## Module Hierarchy
 ```
 NeuromorphicAccelerator
