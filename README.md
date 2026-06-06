@@ -11,7 +11,7 @@ This repository contains the FPGA implementation of the MNIST classifier. A key 
 
 $$
 \begin{aligned}
-E &= (P_{\text{static}} + P_{\text{dyn}}) \cdot t 
+E &= (P_{\text{static}} + P_{\text{dyn}}) \cdot t \\
 &= (VI_{\text{leak}} + \alpha CV^2 f) \cdot t
 \end{aligned}
 $$
