@@ -8,8 +8,12 @@ This project is part of a bachelor thesis with the following objective:
 > *"[...] develop an autonomous robot capable of navigating an area > 1.5m×1.5m. In the constrained area, objects with Modified National Institute of Standards and Technology (MNIST) numbers printed on them will be present. The robot should be able to explore and locate these objects. When the robot has successfully located an object, the robot should be able to focus, read and classify the MNIST number present on the object utilizing an FPGA."*
 
 This repository contains the FPGA implementation of the MNIST classifier. A key design goal is minimizing inference energy consumption. The energy consumed during inference is defined as:
+
 $$
-E = (P_{\text{static}} + P_{\text{dyn}}) \cdot t = (VI_{\text{leak}} + \beta CV^2 f) \cdot t
+\begin{aligned}
+E &= (P_{\text{static}} + P_{\text{dyn}}) \cdot t 
+&= (VI_{\text{leak}} + \alpha CV^2 f) \cdot t
+\end{aligned}
 $$
 
 where $P_{\text{dyn}} \propto f$. Minimizing FPGA resource usage (FFs, LUTs, BRAMs)
