@@ -16,9 +16,7 @@ E &= (P_{\text{static}} + P_{\text{dyn}}) \cdot t \\
 \end{aligned}
 $$
 
-where $P_{\text{dyn}} \propto f$. Minimizing FPGA resource usage (FFs, LUTs, BRAMs)
-and the clock frequency reduces $P_{\text{dyn}}$, and therefore $E_{\text{dyn}}$, while minimizing inference time $t$ reduces the static
-leakage energy $E_{\text{static}}$,
+where $P_{\text{dyn}} \propto f$. Minimizing FPGA resource usage (FFs, LUTs, BRAMs) reduces $P_{\text{dyn}}$, and therefore $E_{\text{dyn}}$, while minimizing inference time $t$ reduces the static leakage energy $E_{\text{static}}$.
 
 ## Overview
 This project implements an image classifier using a ReCA with a perceptron layer. A binary MNIST image is fed through a Cellular Automata (CA) reservoir, downsampled with MaxPooling, and classified by a fully connected layer that updates its weights after every prediction. The PYNQ framework was used in Jupyter Notebook to train and evaluate the model.
@@ -81,7 +79,7 @@ $$
 
 The maximum achievable clock frequency without timing violations, for our design, is $f_{\text{max}} \approx 139$ MHz on the Ultra96-V2, giving estimated $E_{\text{inference}} \approx 18.81\mu\text{J}$ with $A = 1.39$.
 
-### Power and Timing Results
+### Inference Energy and Time Results
 
 Metrics are derived from post-implementation power and timing simulations. Energy savings are relative to the 100 MHz Ultra96-V2 baseline. \*Denotes board $f_{\text{max}}$.
 
