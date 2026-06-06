@@ -79,7 +79,7 @@ $$
 
 The maximum achievable clock frequency without timing violations, for our design, is $f_{\text{max}} \approx 139$ MHz on the Ultra96-V2, giving estimated $E_{\text{inference}} \approx 18.81\mu\text{J}$ with $A = 1.39$.
 
-### Inference Energy and Time Results
+## Inference Energy and Time Results
 
 Metrics are derived from post-implementation power and timing simulations. Energy savings are relative to the 100 MHz Ultra96-V2 baseline. \*Denotes board $f_{\text{max}}$.
 
@@ -91,6 +91,25 @@ Metrics are derived from post-implementation power and timing simulations. Energ
 | ZUBoard 1CG | 142\* | 0.162 | 0.122 | 55.19 | 15.67 | 33.9 |
 
 Static power can be reduced by fitting the design on a smaller device, preferably one slightly larger than the design requires. The smallest FPGA board whose resources were sufficient is the ZUBoard 1CG. With 47.56% fewer FFs and 47.14% fewer LUTs than the Ultra96-V2, it reduces $P_{\text{static}}$ and $P_{\text{dyn}}$ by 23.22% and 48.75% respectively, achieving the lowest inference energy of 15.67 μJ at $f_{\text{max}}$ — a potential energy saving of **33.5–33.9%** over the baseline depending on clock frequency.
+
+## FPGA Resources
+### Resource Utilization (Ultra96-V2)
+
+| Resource | Used | Available | Util% |
+|:---|---:|---:|---:|
+| CLB LUTs | 8,435 | 70,560 | 11.55 |
+| &nbsp;&nbsp;└ LUT as Logic | 3,535 | 70,560 | 5.01 |
+| &nbsp;&nbsp;└ LUT as Memory\* | 4,900 | 28,800 | 17.01 |
+| CLB Registers | 5,250 | 141,120 | 3.72 |
+| &nbsp;&nbsp;└ Register as Flip Flop | 4,457 | 141,120 | 3.16 |
+| &nbsp;&nbsp;└ Register as Latch | 793 | 141,120 | 0.56 |
+| CARRY8 | 12 | 8,820 | 0.14 |
+| F7 Muxes | 2,169 | 35,280 | 6.15 |
+| F8 Muxes | 1,084 | 17,640 | 6.15 |
+| F9 Muxes | 0 | 8,820 | 0.00 |
+| Unique Control Sets | 336 | 17,640 | 1.90 |
+
+\* BRAM instantiation was attempted for weight and bias storage; the synthesizer inferred distributed LUT RAM instead.
 
 ## Repository Folders
 | Folder | Description |
